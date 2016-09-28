@@ -38,12 +38,9 @@ public class Data {
 
         String[] dataDescomposada = data.split(SEPARADOR);
         int[] dataDescomposadaInt = new int[dataDescomposada.length];
-        dataDescomposadaInt[0] = Integer.parseInt(dataDescomposada[0]);
-        dataDescomposadaInt[1] = Integer.parseInt(dataDescomposada[1]);
-        dataDescomposadaInt[2] = Integer.parseInt(dataDescomposada[2]);
-        this.dia = dataDescomposadaInt[0];
-        this.mes = dataDescomposadaInt[1];
-        this.any = dataDescomposadaInt[2];
+        this.dia = dataDescomposadaInt[0] = Integer.parseInt(dataDescomposada[0]);
+        this.mes = dataDescomposadaInt[1] = Integer.parseInt(dataDescomposada[1]);
+        this.any = dataDescomposadaInt[2] = Integer.parseInt(dataDescomposada[2]);
         return dataDescomposadaInt;
 
     }
