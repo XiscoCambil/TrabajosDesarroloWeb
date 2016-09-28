@@ -1,13 +1,24 @@
 package data;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 /**
  * Created by blackwidow on 28/09/16.
  */
-public class data {
+public class Data {
+    public static void main(String[] args) throws Exception {
 
+        AnyDeTraspas a = new AnyDeTraspas();
+        a.setData("01-01-1998");
+        System.out.println(a.isAnyDeTraspas());
+    }
     //#1
     private static final String SEPARADOR = "-";
     private String data;
+    private int dia;
+    private int mes;
+    private int any;
 
     public String getData() {
         return data;
@@ -30,8 +41,20 @@ public class data {
         dataDescomposadaInt[0] = Integer.parseInt(dataDescomposada[0]);
         dataDescomposadaInt[1] = Integer.parseInt(dataDescomposada[1]);
         dataDescomposadaInt[2] = Integer.parseInt(dataDescomposada[2]);
-
+        this.dia = dataDescomposadaInt[0];
+        this.mes = dataDescomposadaInt[1];
+        this.any = dataDescomposadaInt[2];
         return dataDescomposadaInt;
 
     }
+}
+
+class AnyDeTraspas extends Data{
+
+        public boolean isAnyDeTraspas(){
+            GregorianCalendar calendar = new GregorianCalendar();
+            return calendar.isLeapYear(getAny());
+        }
+
+
 }
