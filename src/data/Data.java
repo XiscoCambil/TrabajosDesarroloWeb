@@ -15,26 +15,31 @@ public class Data {
     }
     //#1
     private static final String SEPARADOR = "-";
-    private String data;
+    //private String data;
     private int dia;
     private int mes;
     private int any;
 
     public String getData() {
-        return data;
+        return dia+SEPARADOR+mes+SEPARADOR+any;
     }
 
     public void setData(String data) throws Exception {
         //#2
         if (!data.contains(SEPARADOR)) throw new Exception();
-        this.data = data;
+        //this.data = data;
+        int[] dades = descomposaData(data);
+        this.any = dades[2];
+        this.mes = dades[1];
+        this.dia = dades[0];
     }
 
     public int getAny(){
-        return data != null ? descomposaData()[2] : 0;
+        //return data != null ? descomposaData()[2] : 0;
+        return this.any;
     }
 
-    private int[] descomposaData(){
+    private int[] descomposaData(String data){
 
         String[] dataDescomposada = data.split(SEPARADOR);
         int[] dataDescomposadaInt = new int[dataDescomposada.length];
