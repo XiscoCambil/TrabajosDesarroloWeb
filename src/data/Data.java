@@ -9,6 +9,8 @@ import java.util.GregorianCalendar;
 public class Data {
     public static void main(String[] args) throws Exception {
 
+     ;
+
         AnyDeTraspas a = new AnyDeTraspas();
         a.setData("01-01-1998");
         System.out.println(a.isAnyDeTraspas());
