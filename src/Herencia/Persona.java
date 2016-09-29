@@ -6,23 +6,25 @@ package Herencia;
 public class Persona {
     private String nom;
     private String adreça;
-    private int edad;
-    private String DocumentoIdentidad;
 }
 
 class Alumne extends Persona{
     private String dataAlta;
-
+    private int edat;
 }
 
 class Personal extends Persona{
     private String numSS;
 
+}
 
+class Estudiant extends Alumne{
+    private String nif;
 }
 
 class Intercanvi extends Alumne{
     private String paisOrigen;
+    private String nie;
 }
 
 class Professor extends Personal{
