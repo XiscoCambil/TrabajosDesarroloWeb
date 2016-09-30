@@ -5,7 +5,7 @@ package Herencia;
  */
 public class Persona {
     private String nom;
-    private String adreça;
+    private String adreca;
 }
 
 class Alumne extends Persona{
