@@ -13,7 +13,7 @@ class Persona{
 }
 
 interface Traballador {
-    public void pagaAlTreballador(Traballador treballador);
+     void pagaAlTreballador(Traballador treballador);
 }
 
 class Alumne extends Persona{
