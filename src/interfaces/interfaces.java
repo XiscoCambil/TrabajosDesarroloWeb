@@ -14,6 +14,7 @@ class Persona{
 
 interface Traballador {
      void pagaAlTreballador(Traballador treballador);
+     String ggCCC();
 }
 
 class Alumne extends Persona{
@@ -22,10 +23,16 @@ class Alumne extends Persona{
 
 class Docent extends Persona implements Traballador{
 
+    private String ccc;
 
     @Override
     public void pagaAlTreballador(Traballador treballador) {
 
+    }
+
+    @Override
+    public String ggCCC() {
+        return null;
     }
 }
 
@@ -38,6 +45,11 @@ class Becari extends Alumne implements Traballador{
     @Override
     public void pagaAlTreballador(Traballador treballador) {
 
+    }
+
+    @Override
+    public String ggCCC() {
+        return null;
     }
 }
 
